@@ -9,7 +9,7 @@ const PlayerContextProvider = (props) => {
   const seekBg = useRef();
   const seekBar = useRef();
 
-  const url = "http://localhost:4000";
+  const url = "https://spotify-clone-backend-9nd3.onrender.com";
 
   const [songsData, setSongsData] = useState([]);
   const [albumsData, setAlbumsData] = useState([]);
@@ -105,7 +105,7 @@ const PlayerContextProvider = (props) => {
 
   const getSongsData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/song/list`);
+      const response = await axios.get(`https://spotify-clone-backend-9nd3.onrender.com/api/song/list`);
 
       setSongsData(response.data.songs);
 
@@ -117,7 +117,7 @@ const PlayerContextProvider = (props) => {
 
   const getAlbumsData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/album/list`);
+      const response = await axios.get(`https://spotify-clone-backend-9nd3.onrender.com/api/album/list`);
 
       setAlbumsData(response.data.albums);
 
