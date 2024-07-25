@@ -8,7 +8,7 @@ const ListAlbum = () => {
 
   const fetchAlbums = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/album/list`);
+      const response = await axios.get(`https://spotify-clone-backend-9nd3.onrender.com/api/album/list`);
 
       if (response.data.success) {
         setData(response.data.albums);
@@ -21,7 +21,7 @@ const ListAlbum = () => {
   const removeAlbum = async (id) => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/album/remove`,
+        `https://spotify-clone-backend-9nd3.onrender.com/api/album/remove`,
         { id }
       );
 
