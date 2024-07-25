@@ -24,7 +24,7 @@ const AddAlbum = () => {
       formData.append("bgColour", colour);
 
       const response = await axios.post(
-        `http://localhost:4000/api/album/add`,
+        `https://spotify-clone-backend-9nd3.onrender.com/api/album/add`,
         formData
       );
 
