@@ -27,7 +27,7 @@ const AddSong = () => {
       formData.append("album", album);
 
       const response = await axios.post(
-        `http://localhost:4000/api/song/add`,
+        `https://spotify-clone-backend-9nd3.onrender.com/api/song/add`,
         formData
       );
 
@@ -51,7 +51,7 @@ const AddSong = () => {
 
   const loadAlbumData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/album/list`);
+      const response = await axios.get(`https://spotify-clone-backend-9nd3.onrender.com/api/album/list`);
 
       if (response.data.success) {
         setAlbumData(response.data.albums);
